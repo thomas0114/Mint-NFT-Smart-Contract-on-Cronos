@@ -38,10 +38,10 @@ module.exports = {
     ],
   },
   defaultNetwork: "testnet",
-  etherscan: {
-    apiKey: process.env.POLYGON_API_KEY,
-    // apiKey: process.env.BSCSCAN_API_KEY
-  },
+  // etherscan: {
+  //   apiKey: process.env.ETHERSCAN_API_KEY,
+  //   // apiKey: process.env.BSCSCAN_API_KEY
+  // },
   networks: {
     localhost: {
       url: "http://127.0.0.1:8545",
@@ -50,14 +50,22 @@ module.exports = {
       accounts: [process.env.PRIVATEKEY],
     },
     testnet: {
-      url: "https://matic-mumbai.chainstacklabs.com",
-      chainId: 80001,
-      accounts: [`0x${process.env.PRIVATEKEY}`],
+      url: "https://scoville-rpc.chiliz.com",
+      chainId: 88880,
       gas: 2100000,
       gasPrice: 20000000000,
-      // gasPrice: 8000000000,
-      // saveDeployments: true,
+      accounts: [process.env.PRIVATEKEY],
     },
+
+    // testnet: {
+    //   url: "https://matic-mumbai.chainstacklabs.com",
+    //   chainId: 80001,
+    //   accounts: [`0x${process.env.PRIVATEKEY}`],
+    //   gas: 2100000,
+    //   gasPrice: 20000000000,
+    //   // gasPrice: 8000000000,
+    //   // saveDeployments: true,
+    // },
     rinkeby: {
       url: "https://rinkeby.infura.io/v3/b45ff4de8a1e4e7db9b781b4a8fcdc5a",
       chainId: 4,
@@ -89,6 +97,13 @@ module.exports = {
     mumbai: {
       url: "https://matic-mumbai.chainstacklabs.com",
       chainId: 80001,
+      gas: 2100000,
+      gasPrice: 20000000000,
+      accounts: [process.env.PRIVATEKEY],
+    },
+    scoville: {
+      url: "https://scoville-rpc.chiliz.com",
+      chainId: 88880,
       gas: 2100000,
       gasPrice: 20000000000,
       accounts: [process.env.PRIVATEKEY],
